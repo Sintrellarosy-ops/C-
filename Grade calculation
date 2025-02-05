@@ -1,0 +1,14 @@
+#include <iostream>
+#include <vector>
+#include <numeric>
+#include <iomanip>
+
+using namespace std;
+
+int main() {
+  int n; cout << "Subjects: "; cin >> n;
+  vector<float> m(n); for (int i = 0; i < n; i++) { cout << "Marks: "; cin >> m[i]; }
+  float avg = accumulate(m.begin(), m.end(), 0.0f) / n;
+  cout << fixed << setprecision(2) << "Avg: " << avg << ", Grade: " << (avg >= 90 ? 'A' : avg >= 80 ? 'B' : avg >= 70 ? 'C' : avg >= 60 ? 'D' : 'F') << endl;
+  return 0;
+}

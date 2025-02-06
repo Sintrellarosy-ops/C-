@@ -1,0 +1,11 @@
+#include <iostream>
+#include <string>
+
+int main() {
+  std::string str;
+  std::cout << "Enter a string: ";
+  std::getline(std::cin, str);  // Use getline to read strings with spaces
+  std::cout << "Length of string: " << str.length() << std::endl;
+  return 0;
+}
+
